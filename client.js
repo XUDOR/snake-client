@@ -14,14 +14,15 @@ const connect = function () {
     console.log("Successfully connected to the server!");
   });
 
+  conn.on("connect", () => {
+    conn.write("Name: RDX");
+  });
+
   conn.on("data", (data) => {
     console.log("Received from server:", data);
   });
 
   return conn;
 };
-
-console.log("Connecting ...");
-connect();
 
 module.exports = { connect }; // This is the ES6 shorthand syntax
