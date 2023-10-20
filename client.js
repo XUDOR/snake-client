@@ -14,7 +14,7 @@ const connect = function () {
     console.log("Successfully connected to the server!");
     conn.write("Name: RDX");
     
-    //loop ::
+    //loop :: //probably gone >
     let count = 0;
     const interval = setInterval(() => { /// setInterval
       if (count < 10) {
