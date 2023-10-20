@@ -1,6 +1,6 @@
-
 const net = require("net");
 const { IP, PORT } = require('./constants');
+
 
 
 const connect = function() {
@@ -9,26 +9,26 @@ const connect = function() {
     port: PORT
   });
 
-
   // interpret incoming data as text
   conn.setEncoding("utf8");
 
   conn.on("connect", () => {
     console.log("Successfully connected to the server!");
     conn.write("Name: RDX");
-    
-    //loop :: //probably gone >
+  
+    // Comment out the loop
+    /*
     let count = 0;
-    const interval = setInterval(() => { /// setInterval
+    const interval = setInterval(() => {
       if (count < 100) {
-        conn.write("Move: up"); // probably going to be removed.. >>
+        conn.write(`Move: ${direction}`);
         count++;
       } else {
-        clearInterval(interval); // Clear the interval after sending the command 10 times
+        clearInterval(interval);
       }
-    }, 700);  // delay of 500 milliseconds
+    }, 500);
+    */
   });
-  
 
   conn.on("data", (data) => {
     console.log("Received from server:", data);
@@ -37,4 +37,4 @@ const connect = function() {
   return conn;
 };
 
-module.exports = { connect }; // This is the ES6 shorthand syntax
+module.exports = { connect };
