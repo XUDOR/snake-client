@@ -26,6 +26,14 @@ const handleUserInput = function (key) {
   case '1':
     connection.write('Say: King of NY A#1! ');
     break;
+  
+  case '2':
+    connection.write('Say: Tay Tay Squad! ');
+    break;
+  case '3':
+    connection.write('Say: Union of the Snake! ');
+    break;
+  
   }
 };
 
