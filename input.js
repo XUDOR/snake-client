@@ -1,12 +1,26 @@
-// Define the handleUserInput function
 const handleUserInput = function (key) {
   // If the user enters ctrl + c (end of text character), exit the game
   if (key === '\u0003') {
     process.exit();
-  }//// user input
+  }
+
+  // WASD Movement user input
+  switch (key) {
+  case 'w':
+    console.log('Move: up');
+    break;
+  case 'a':
+    console.log('Move: left');
+    break;
+  case 's':
+    console.log('Move: down');
+    break;
+  case 'd':
+    console.log('Move: right');
+    break;
+  }
 };
 
-// Define the setupInput function
 const setupInput = function () {
   const stdin = process.stdin;
   stdin.setRawMode(true);
@@ -18,4 +32,5 @@ const setupInput = function () {
 
   return stdin;
 };
+
 module.exports = { setupInput };
