@@ -1,3 +1,5 @@
+let connection;
+
 const handleUserInput = function (key) {
   // If the user enters ctrl + c (end of text character), exit the game
   if (key === '\u0003') {
@@ -7,21 +9,23 @@ const handleUserInput = function (key) {
   // WASD Movement user input
   switch (key) {
   case 'w':
-    console.log('Move: up');
+    connection.write('Move: up');
     break;
   case 'a':
-    console.log('Move: left');
+    connection.write('Move: left');
     break;
   case 's':
-    console.log('Move: down');
+    connection.write('Move: down');
     break;
   case 'd':
-    console.log('Move: right');
+    connection.write('Move: right');
     break;
   }
 };
 
-const setupInput = function () {
+const setupInput = (conn) => {
+  connection = conn;  // <-- This is the key line. Assign the passed connection to the module-level variable.
+
   const stdin = process.stdin;
   stdin.setRawMode(true);
   stdin.setEncoding("utf8");
