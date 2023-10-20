@@ -16,18 +16,6 @@ const connect = function() {
     console.log("Successfully connected to the server!");
     conn.write("Name: RDX");
   
-    // Comment out the loop
-    /*
-    let count = 0;
-    const interval = setInterval(() => {
-      if (count < 100) {
-        conn.write(`Move: ${direction}`);
-        count++;
-      } else {
-        clearInterval(interval);
-      }
-    }, 500);
-    */
   });
 
   conn.on("data", (data) => {
