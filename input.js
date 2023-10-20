@@ -20,6 +20,9 @@ const handleUserInput = function (key) {
   case 'd':
     connection.write('Move: right');
     break;
+  case '1':
+    connection.write('Say: King of NY -A#1! ');
+    break;
   }
 };
 

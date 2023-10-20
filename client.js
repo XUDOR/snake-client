@@ -17,7 +17,7 @@ const connect = function() {
     //loop :: //probably gone >
     let count = 0;
     const interval = setInterval(() => { /// setInterval
-      if (count < 10) {
+      if (count < 100) {
         conn.write("Move: up"); // probably going to be removed.. >>
         count++;
       } else {
