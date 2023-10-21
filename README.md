@@ -7,16 +7,12 @@ This is simply a multiplayer take on the genre.
 Before you can run this client, you will need to be running the server side which you can download and install from here. 
 
 
-
-
 [LIGHTHOUSE-SNEK-MULTiPLAYER](https://github.com/lighthouse-labs/snek-multiplayer)
 
 
 ## Final Product
 
 ![SNAKE-IMAGE](SNAKE_IMG_sm.png)
-
-
 
 
 ## Getting Started
@@ -33,3 +29,5 @@ ___________________________________________________
 * messages: [1,2,3];
 # command + C : EXIT
 
+This has been an assignment for LIGHTHOUSE LABS 
+Submitted by Roderick Shoolbraid October 20th / 2023.
