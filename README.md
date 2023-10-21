@@ -8,7 +8,8 @@ Before you can run this client, you will need to be running the server side whic
 
 
 
-[LIGHTHOUSE-SNEK-MULTiPLAYER](https://github.com/lighthouse-labs/snek-multiplayer){:target="_blank"}
+
+[LIGHTHOUSE-SNEK-MULTiPLAYER](https://github.com/lighthouse-labs/snek-multiplayer)
 
 
 ## Final Product
